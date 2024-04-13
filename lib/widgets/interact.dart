@@ -37,7 +37,7 @@ class InteractWidget extends StatelessWidget {
       return Column(
         children: [
           Container(
-            height: screenSize.height * 0.07,
+            padding: EdgeInsets.only(top: 10, bottom: 10),
             decoration: BoxDecoration(
               border: Border(
                 bottom: BorderSide(
@@ -73,7 +73,7 @@ class InteractWidget extends StatelessWidget {
                   child: user == video.Username
                   ? Container()
                   : Container(
-                    margin: EdgeInsets.only(right: 10, top: 10, bottom: 10),
+                    margin: EdgeInsets.only(right: 10),
                     padding: EdgeInsets.only(
                         top: 10, bottom: 10, right: 20, left: 20),
                     decoration: BoxDecoration(
@@ -103,7 +103,7 @@ class InteractWidget extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image.asset('assets/images/save.png'),
+                          Image.asset('assets/images/save.png', width: 16,),
                           SizedBox(
                             width: 5,
                           ),
@@ -145,7 +145,7 @@ class InteractWidget extends StatelessWidget {
   Widget interactButton(BuildContext context, List<dynamic> interactList,
       String iconURL, String type, int MaVD, String user) {
     return Container(
-      margin: EdgeInsets.only(left: 10, top: 10, bottom: 10),
+      margin: EdgeInsets.only(left: 10),
       padding: EdgeInsets.only(top: 10, bottom: 10, right: 20, left: 20),
       decoration: BoxDecoration(
         color: Colors.black12,
@@ -187,7 +187,7 @@ class InteractWidget extends StatelessWidget {
         },
         child: Row(
           children: [
-            Image.asset(iconURL),
+            Image.asset(iconURL, width: 16,),
             SizedBox(
               width: 5,
             ),

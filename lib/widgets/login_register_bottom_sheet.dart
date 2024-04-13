@@ -77,7 +77,7 @@ void BottomSheetShow({required BuildContext context}) {
             padding: EdgeInsets.only(
                 bottom: MediaQuery.of(context).viewInsets.bottom),
             child: Container(
-              height: screenSize.height * 0.3,
+              height: screenSize.height * 0.5,
               child: PageView(
                 controller: pageController,
                 physics: NeverScrollableScrollPhysics(),

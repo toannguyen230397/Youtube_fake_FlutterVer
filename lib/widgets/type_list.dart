@@ -37,22 +37,15 @@ class _TypeListState extends State<TypeList> {
         child: BlocBuilder<ButtonPressBloc, ButtonPressState>(
             builder: (context, buttonSate) {
               return ListView.builder(
+                  shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
                   itemCount: titleList.length,
                   itemBuilder: (context, index) {
                     final title = titleList[index];
                     return Container(
                       margin: EdgeInsets.only(left: 10, top: 10, bottom: 10),
-                      padding: EdgeInsets.only(
-                          top: 10, bottom: 10, right: 20, left: 20),
-                      decoration: BoxDecoration(
-                        color: buttonSate.buttonTile == title
-                            ? Colors.red
-                            : Colors.black12,
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: InkWell(
-                        onTap: () {
+                      child: OutlinedButton(
+                        onPressed: () {
                           final videoManagerState = context.read<VideoManagerBloc>().state;
                           if(videoManagerState.video.isNotEmpty) {
                             context
@@ -64,12 +57,11 @@ class _TypeListState extends State<TypeList> {
                               .add(LoadDataByType(type: title));
                           }
                         },
-                        child: Text(title,
-                            style: buttonSate.buttonTile == title
-                                ? TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white)
-                                : null),
+                        child: Text(title, style: TextStyle(color: buttonSate.buttonTile == title ? Colors.white : Colors.black),),
+                        style: OutlinedButton.styleFrom(
+                          backgroundColor: buttonSate.buttonTile == title ? Colors.red : Colors.black12,
+                          side: BorderSide.none,
+                        ),
                       ),
                     );
                   });
