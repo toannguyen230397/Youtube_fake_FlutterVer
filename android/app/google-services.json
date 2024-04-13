@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "339425899034",
+    "project_id": "fakestorage-d6cfd",
+    "storage_bucket": "fakestorage-d6cfd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339425899034:android:19310b99c3124e026397a3",
+        "android_client_info": {
+          "package_name": "com.example.youtube_fake"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "339425899034-s29e13946sn4m119t835o433iqefgn8r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDefW1BGMPKxxZgBcNJ0R_Fgzfz088aWEs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "339425899034-s29e13946sn4m119t835o433iqefgn8r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
