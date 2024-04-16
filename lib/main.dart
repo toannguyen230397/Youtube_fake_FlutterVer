@@ -10,7 +10,6 @@ import 'package:youtube_fake/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:youtube_fake/screens/home_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:youtube_fake/screens/test.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

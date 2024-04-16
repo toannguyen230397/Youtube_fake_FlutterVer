@@ -4,15 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:youtube_fake/blocs/album_video/album_video_bloc.dart';
 import 'package:youtube_fake/blocs/login_register/login_register_bloc.dart';
 import 'package:youtube_fake/blocs/picker/picker_bloc.dart';
 import 'package:flick_video_player/flick_video_player.dart';
 import 'package:video_player/video_player.dart';
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:youtube_fake/blocs/video_manager/video_manager_bloc.dart';
-import 'package:youtube_fake/model/ytb_video_model.dart';
-import 'package:youtube_fake/screens/home_screen.dart';
 import 'package:youtube_fake/widgets/dialog.dart';
 
 class PostScreen extends StatelessWidget {
@@ -225,48 +221,6 @@ class PageThree extends StatelessWidget {
       'Thể Thao',
       'Trò Chơi',
     ];
-
-    void _uploadFileToFirebase(
-        {required File thumbnail, required File video}) async {
-      final storageRef = FirebaseStorage.instance.ref();
-      try {
-        String thumbnailFileName =
-            'Image-${DateTime.now().millisecondsSinceEpoch}';
-        String videolFileName =
-            'Video-${DateTime.now().millisecondsSinceEpoch}';
-        String imageURL = '';
-        String videoURL = '';
-
-        final thumbnailReference =
-            storageRef.child('Thumbnails/$thumbnailFileName');
-        final videoReference = storageRef.child('Videos/$videolFileName');
-
-        final UploadTask uploadThumbnail = thumbnailReference.putFile(
-            thumbnail,
-            SettableMetadata(
-              contentType: "image/jpeg",
-            ));
-        await uploadThumbnail.whenComplete(() async {
-          print('Tải tệp $thumbnailFileName lên Firebase Storage thành công.');
-          final String downloadImageURL =
-              await thumbnailReference.getDownloadURL();
-          imageURL = downloadImageURL;
-        });
-
-        final UploadTask uploadVideo = videoReference.putFile(
-            video,
-            SettableMetadata(
-              contentType: "video/mp4",
-            ));
-        await uploadVideo.whenComplete(() async {
-          print('Tải tệp $videolFileName lên Firebase Storage thành công.');
-          final String downloadVideoURL = await videoReference.getDownloadURL();
-          videoURL = downloadVideoURL;
-        });
-      } catch (e) {
-        print('Error: $e');
-      }
-    }
 
     return Scaffold(
       appBar: AppBar(
