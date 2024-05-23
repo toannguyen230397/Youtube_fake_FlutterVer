@@ -1,16 +1,15 @@
-# youtube_fake
+# About this app
+The application allows users to upload and share videos and search or save videos according to their preferences.
 
-A new Flutter project.
+## How to run the app
+For Android devices, you can download the app by clicking this link [Download](https://drive.google.com/file/d/1vZPX5vPv7UWvKShA3iXKawOM5ULsMMOj/view?usp=sharing)
 
-## Getting Started
+Or you can run with VSCode:
+- Make sure you have installed Flutter, Android Studio and VScode on your PC
+- Clone this Project, then Open it in VSCode
+- Run the project with Android Emulator
+- Enjoy!
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Functions/Features of the app
+**Play Video**
+![play_video](https://github.com/toannguyen230397/Youtube_fake_FlutterVer/assets/121475751/cb1bc40f-5b42-404c-8154-66cceab663c8)
